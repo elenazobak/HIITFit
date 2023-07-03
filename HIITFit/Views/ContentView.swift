@@ -12,8 +12,8 @@ struct ContentView: View {
         
         TabView {
             WelcomeView()   // was Text("Welcome")
-            ForEach(0 ..< 4) { number in
-                ExerciseView(index: number)
+            ForEach(Exercise.exercises.indices, id: \.self) { index in
+                ExerciseView(index: index)
             }
             
             
